@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC54F0931D6B2F5A007A1847 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54F0921D6B2F5A007A1847 /* Appointment.swift */; };
+		DC67745E1D66D75B00963FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67745D1D66D75B00963FE7 /* AppDelegate.swift */; };
+		DC6774651D66D75B00963FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6774631D66D75B00963FE7 /* Main.storyboard */; };
+		DC6774671D66D75B00963FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6774661D66D75B00963FE7 /* Assets.xcassets */; };
+		DC67746A1D66D75B00963FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6774681D66D75B00963FE7 /* LaunchScreen.storyboard */; };
+		DC6774751D66D75B00963FE7 /* AutoXtion_CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774741D66D75B00963FE7 /* AutoXtion_CustomerTests.swift */; };
+		DC6774801D66D75B00963FE7 /* AutoXtion_CustomerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67747F1D66D75B00963FE7 /* AutoXtion_CustomerUITests.swift */; };
+		DC67748E1D66D7F800963FE7 /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67748D1D66D7F800963FE7 /* PromotionViewController.swift */; };
+		DC6774901D66D84200963FE7 /* CustomerVehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67748F1D66D84200963FE7 /* CustomerVehiclesViewController.swift */; };
+		DC6774921D66E4B700963FE7 /* CustomerLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774911D66E4B700963FE7 /* CustomerLaunchViewController.swift */; };
+		DC6774941D66E67F00963FE7 /* CustomerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774931D66E67F00963FE7 /* CustomerLoginViewController.swift */; };
+		DC6774961D66E68F00963FE7 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774951D66E68F00963FE7 /* ForgotPasswordViewController.swift */; };
+		DC6774981D66F73800963FE7 /* PromotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774971D66F73800963FE7 /* PromotionTableViewCell.swift */; };
+		DC67749A1D66FE1300963FE7 /* RequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774991D66FE1300963FE7 /* RequestTableViewCell.swift */; };
+		DC67749C1D66FE2F00963FE7 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67749B1D66FE2F00963FE7 /* RequestViewController.swift */; };
+		DC67749E1D67028000963FE7 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67749D1D67028000963FE7 /* AppointmentViewController.swift */; };
+		DC6774A21D6702BE00963FE7 /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774A11D6702BE00963FE7 /* AppointmentTableViewCell.swift */; };
+		DC6774A41D6727ED00963FE7 /* VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774A31D6727ED00963FE7 /* VehicleViewController.swift */; };
+		DC6774A61D67283B00963FE7 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774A51D67283B00963FE7 /* FeedbackViewController.swift */; };
+		DC6774A81D673C8500963FE7 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774A71D673C8500963FE7 /* SettingTableViewController.swift */; };
+		DC6774AA1D673CE900963FE7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774A91D673CE900963FE7 /* EditProfileViewController.swift */; };
+		DC6774AC1D673D2100963FE7 /* ChangePasswordProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774AB1D673D2100963FE7 /* ChangePasswordProfileViewController.swift */; };
+		DC6774AF1D6740D600963FE7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774AD1D6740D600963FE7 /* CustomView.swift */; };
+		DC6774B01D6740D600963FE7 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774AE1D6740D600963FE7 /* DismissSegue.swift */; };
+		DC6774B21D674E2F00963FE7 /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6774B11D674E2F00963FE7 /* VehicleTableViewCell.swift */; };
+		DC7441A81D68332300914607 /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441A71D68332300914607 /* AddVehicleViewController.swift */; };
+		DC7441AA1D6834DA00914607 /* VehicleBrandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441A91D6834DA00914607 /* VehicleBrandsViewController.swift */; };
+		DC7441AC1D6834FD00914607 /* VehicleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441AB1D6834FD00914607 /* VehicleModelViewController.swift */; };
+		DC7441AE1D68350E00914607 /* VehicleYearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441AD1D68350E00914607 /* VehicleYearViewController.swift */; };
+		DC7441B01D68352A00914607 /* VehicleYearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441AF1D68352A00914607 /* VehicleYearTableViewCell.swift */; };
+		DC7441B21D68353F00914607 /* VehicleModelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B11D68353F00914607 /* VehicleModelsTableViewCell.swift */; };
+		DC7441B41D68355300914607 /* VehicleBrandsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B31D68355300914607 /* VehicleBrandsTableViewCell.swift */; };
+		DC7441B61D686F1300914607 /* PromotionRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B51D686F1300914607 /* PromotionRequestViewController.swift */; };
+		DC7441B81D686F2200914607 /* AddRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B71D686F2200914607 /* AddRequestViewController.swift */; };
+		DC7441BA1D68723E00914607 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B91D68723E00914607 /* ServicesViewController.swift */; };
+		DC7441BC1D68725A00914607 /* ServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BB1D68725A00914607 /* ServicesTableViewCell.swift */; };
+		DC7441BF1D6874B000914607 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */; };
+		DC7441C01D6874B000914607 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BE1D6874B000914607 /* SSRadioButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC6774711D66D75B00963FE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC6774521D66D75A00963FE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC6774591D66D75A00963FE7;
+			remoteInfo = "AutoXtion Customer";
+		};
+		DC67747C1D66D75B00963FE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC6774521D66D75A00963FE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC6774591D66D75A00963FE7;
+			remoteInfo = "AutoXtion Customer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC54F0921D6B2F5A007A1847 /* Appointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		DC67745A1D66D75A00963FE7 /* AutoXtion Customer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AutoXtion Customer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC67745D1D66D75B00963FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC6774641D66D75B00963FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC6774661D66D75B00963FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC6774691D66D75B00963FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC67746B1D66D75B00963FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6774701D66D75B00963FE7 /* AutoXtion CustomerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AutoXtion CustomerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6774741D66D75B00963FE7 /* AutoXtion_CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoXtion_CustomerTests.swift; sourceTree = "<group>"; };
+		DC6774761D66D75B00963FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC67747B1D66D75B00963FE7 /* AutoXtion CustomerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AutoXtion CustomerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC67747F1D66D75B00963FE7 /* AutoXtion_CustomerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoXtion_CustomerUITests.swift; sourceTree = "<group>"; };
+		DC6774811D66D75B00963FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC67748D1D66D7F800963FE7 /* PromotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
+		DC67748F1D66D84200963FE7 /* CustomerVehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerVehiclesViewController.swift; sourceTree = "<group>"; };
+		DC6774911D66E4B700963FE7 /* CustomerLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerLaunchViewController.swift; sourceTree = "<group>"; };
+		DC6774931D66E67F00963FE7 /* CustomerLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerLoginViewController.swift; sourceTree = "<group>"; };
+		DC6774951D66E68F00963FE7 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		DC6774971D66F73800963FE7 /* PromotionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionTableViewCell.swift; sourceTree = "<group>"; };
+		DC6774991D66FE1300963FE7 /* RequestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTableViewCell.swift; sourceTree = "<group>"; };
+		DC67749B1D66FE2F00963FE7 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		DC67749D1D67028000963FE7 /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		DC6774A11D6702BE00963FE7 /* AppointmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewCell.swift; sourceTree = "<group>"; };
+		DC6774A31D6727ED00963FE7 /* VehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleViewController.swift; sourceTree = "<group>"; };
+		DC6774A51D67283B00963FE7 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		DC6774A71D673C8500963FE7 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		DC6774A91D673CE900963FE7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		DC6774AB1D673D2100963FE7 /* ChangePasswordProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordProfileViewController.swift; sourceTree = "<group>"; };
+		DC6774AD1D6740D600963FE7 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		DC6774AE1D6740D600963FE7 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		DC6774B11D674E2F00963FE7 /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
+		DC7441A71D68332300914607 /* AddVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVehicleViewController.swift; sourceTree = "<group>"; };
+		DC7441A91D6834DA00914607 /* VehicleBrandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleBrandsViewController.swift; sourceTree = "<group>"; };
+		DC7441AB1D6834FD00914607 /* VehicleModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewController.swift; sourceTree = "<group>"; };
+		DC7441AD1D68350E00914607 /* VehicleYearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleYearViewController.swift; sourceTree = "<group>"; };
+		DC7441AF1D68352A00914607 /* VehicleYearTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleYearTableViewCell.swift; sourceTree = "<group>"; };
+		DC7441B11D68353F00914607 /* VehicleModelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelsTableViewCell.swift; sourceTree = "<group>"; };
+		DC7441B31D68355300914607 /* VehicleBrandsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleBrandsTableViewCell.swift; sourceTree = "<group>"; };
+		DC7441B51D686F1300914607 /* PromotionRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionRequestViewController.swift; sourceTree = "<group>"; };
+		DC7441B71D686F2200914607 /* AddRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRequestViewController.swift; sourceTree = "<group>"; };
+		DC7441B91D68723E00914607 /* ServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		DC7441BB1D68725A00914607 /* ServicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewCell.swift; sourceTree = "<group>"; };
+		DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
+		DC7441BE1D6874B000914607 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC6774571D66D75A00963FE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC67746D1D66D75B00963FE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6774781D66D75B00963FE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC6774511D66D75A00963FE7 = {
+			isa = PBXGroup;
+			children = (
+				DC67745C1D66D75B00963FE7 /* AutoXtion Customer */,
+				DC6774731D66D75B00963FE7 /* AutoXtion CustomerTests */,
+				DC67747E1D66D75B00963FE7 /* AutoXtion CustomerUITests */,
+				DC67745B1D66D75A00963FE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC67745B1D66D75A00963FE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC67745A1D66D75A00963FE7 /* AutoXtion Customer.app */,
+				DC6774701D66D75B00963FE7 /* AutoXtion CustomerTests.xctest */,
+				DC67747B1D66D75B00963FE7 /* AutoXtion CustomerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC67745C1D66D75B00963FE7 /* AutoXtion Customer */ = {
+			isa = PBXGroup;
+			children = (
+				DC67745D1D66D75B00963FE7 /* AppDelegate.swift */,
+				DC6774631D66D75B00963FE7 /* Main.storyboard */,
+				DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */,
+				DC7441BE1D6874B000914607 /* SSRadioButton.swift */,
+				DC6774661D66D75B00963FE7 /* Assets.xcassets */,
+				DC6774681D66D75B00963FE7 /* LaunchScreen.storyboard */,
+				DC67746B1D66D75B00963FE7 /* Info.plist */,
+				DC67748D1D66D7F800963FE7 /* PromotionViewController.swift */,
+				DC67748F1D66D84200963FE7 /* CustomerVehiclesViewController.swift */,
+				DC6774AD1D6740D600963FE7 /* CustomView.swift */,
+				DC6774AE1D6740D600963FE7 /* DismissSegue.swift */,
+				DC6774911D66E4B700963FE7 /* CustomerLaunchViewController.swift */,
+				DC6774931D66E67F00963FE7 /* CustomerLoginViewController.swift */,
+				DC6774951D66E68F00963FE7 /* ForgotPasswordViewController.swift */,
+				DC6774971D66F73800963FE7 /* PromotionTableViewCell.swift */,
+				DC6774991D66FE1300963FE7 /* RequestTableViewCell.swift */,
+				DC67749B1D66FE2F00963FE7 /* RequestViewController.swift */,
+				DC67749D1D67028000963FE7 /* AppointmentViewController.swift */,
+				DC6774A11D6702BE00963FE7 /* AppointmentTableViewCell.swift */,
+				DC6774A31D6727ED00963FE7 /* VehicleViewController.swift */,
+				DC6774A51D67283B00963FE7 /* FeedbackViewController.swift */,
+				DC6774A71D673C8500963FE7 /* SettingTableViewController.swift */,
+				DC6774A91D673CE900963FE7 /* EditProfileViewController.swift */,
+				DC6774AB1D673D2100963FE7 /* ChangePasswordProfileViewController.swift */,
+				DC6774B11D674E2F00963FE7 /* VehicleTableViewCell.swift */,
+				DC7441A71D68332300914607 /* AddVehicleViewController.swift */,
+				DC7441A91D6834DA00914607 /* VehicleBrandsViewController.swift */,
+				DC7441AB1D6834FD00914607 /* VehicleModelViewController.swift */,
+				DC7441AD1D68350E00914607 /* VehicleYearViewController.swift */,
+				DC7441AF1D68352A00914607 /* VehicleYearTableViewCell.swift */,
+				DC7441B11D68353F00914607 /* VehicleModelsTableViewCell.swift */,
+				DC7441B31D68355300914607 /* VehicleBrandsTableViewCell.swift */,
+				DC7441B51D686F1300914607 /* PromotionRequestViewController.swift */,
+				DC7441B71D686F2200914607 /* AddRequestViewController.swift */,
+				DC7441B91D68723E00914607 /* ServicesViewController.swift */,
+				DC7441BB1D68725A00914607 /* ServicesTableViewCell.swift */,
+				DC54F0921D6B2F5A007A1847 /* Appointment.swift */,
+			);
+			path = "AutoXtion Customer";
+			sourceTree = "<group>";
+		};
+		DC6774731D66D75B00963FE7 /* AutoXtion CustomerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC6774741D66D75B00963FE7 /* AutoXtion_CustomerTests.swift */,
+				DC6774761D66D75B00963FE7 /* Info.plist */,
+			);
+			path = "AutoXtion CustomerTests";
+			sourceTree = "<group>";
+		};
+		DC67747E1D66D75B00963FE7 /* AutoXtion CustomerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC67747F1D66D75B00963FE7 /* AutoXtion_CustomerUITests.swift */,
+				DC6774811D66D75B00963FE7 /* Info.plist */,
+			);
+			path = "AutoXtion CustomerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC6774591D66D75A00963FE7 /* AutoXtion Customer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6774841D66D75B00963FE7 /* Build configuration list for PBXNativeTarget "AutoXtion Customer" */;
+			buildPhases = (
+				DC6774561D66D75A00963FE7 /* Sources */,
+				DC6774571D66D75A00963FE7 /* Frameworks */,
+				DC6774581D66D75A00963FE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AutoXtion Customer";
+			productName = "AutoXtion Customer";
+			productReference = DC67745A1D66D75A00963FE7 /* AutoXtion Customer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC67746F1D66D75B00963FE7 /* AutoXtion CustomerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6774871D66D75B00963FE7 /* Build configuration list for PBXNativeTarget "AutoXtion CustomerTests" */;
+			buildPhases = (
+				DC67746C1D66D75B00963FE7 /* Sources */,
+				DC67746D1D66D75B00963FE7 /* Frameworks */,
+				DC67746E1D66D75B00963FE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC6774721D66D75B00963FE7 /* PBXTargetDependency */,
+			);
+			name = "AutoXtion CustomerTests";
+			productName = "AutoXtion CustomerTests";
+			productReference = DC6774701D66D75B00963FE7 /* AutoXtion CustomerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC67747A1D66D75B00963FE7 /* AutoXtion CustomerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC67748A1D66D75B00963FE7 /* Build configuration list for PBXNativeTarget "AutoXtion CustomerUITests" */;
+			buildPhases = (
+				DC6774771D66D75B00963FE7 /* Sources */,
+				DC6774781D66D75B00963FE7 /* Frameworks */,
+				DC6774791D66D75B00963FE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC67747D1D66D75B00963FE7 /* PBXTargetDependency */,
+			);
+			name = "AutoXtion CustomerUITests";
+			productName = "AutoXtion CustomerUITests";
+			productReference = DC67747B1D66D75B00963FE7 /* AutoXtion CustomerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC6774521D66D75A00963FE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Age Analytics";
+				TargetAttributes = {
+					DC6774591D66D75A00963FE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X464Y7PPTE;
+					};
+					DC67746F1D66D75B00963FE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DC6774591D66D75A00963FE7;
+					};
+					DC67747A1D66D75B00963FE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DC6774591D66D75A00963FE7;
+					};
+				};
+			};
+			buildConfigurationList = DC6774551D66D75A00963FE7 /* Build configuration list for PBXProject "AutoXtion Customer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC6774511D66D75A00963FE7;
+			productRefGroup = DC67745B1D66D75A00963FE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC6774591D66D75A00963FE7 /* AutoXtion Customer */,
+				DC67746F1D66D75B00963FE7 /* AutoXtion CustomerTests */,
+				DC67747A1D66D75B00963FE7 /* AutoXtion CustomerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC6774581D66D75A00963FE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC67746A1D66D75B00963FE7 /* LaunchScreen.storyboard in Resources */,
+				DC6774671D66D75B00963FE7 /* Assets.xcassets in Resources */,
+				DC6774651D66D75B00963FE7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC67746E1D66D75B00963FE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6774791D66D75B00963FE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC6774561D66D75A00963FE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6774A81D673C8500963FE7 /* SettingTableViewController.swift in Sources */,
+				DC7441A81D68332300914607 /* AddVehicleViewController.swift in Sources */,
+				DC6774901D66D84200963FE7 /* CustomerVehiclesViewController.swift in Sources */,
+				DC6774A41D6727ED00963FE7 /* VehicleViewController.swift in Sources */,
+				DC7441BF1D6874B000914607 /* SSRadioButtonsController.swift in Sources */,
+				DC7441B61D686F1300914607 /* PromotionRequestViewController.swift in Sources */,
+				DC67749A1D66FE1300963FE7 /* RequestTableViewCell.swift in Sources */,
+				DC7441B21D68353F00914607 /* VehicleModelsTableViewCell.swift in Sources */,
+				DC7441B01D68352A00914607 /* VehicleYearTableViewCell.swift in Sources */,
+				DC6774921D66E4B700963FE7 /* CustomerLaunchViewController.swift in Sources */,
+				DC6774961D66E68F00963FE7 /* ForgotPasswordViewController.swift in Sources */,
+				DC6774B21D674E2F00963FE7 /* VehicleTableViewCell.swift in Sources */,
+				DC6774941D66E67F00963FE7 /* CustomerLoginViewController.swift in Sources */,
+				DC67749C1D66FE2F00963FE7 /* RequestViewController.swift in Sources */,
+				DC6774AA1D673CE900963FE7 /* EditProfileViewController.swift in Sources */,
+				DC6774AF1D6740D600963FE7 /* CustomView.swift in Sources */,
+				DC7441AC1D6834FD00914607 /* VehicleModelViewController.swift in Sources */,
+				DC67748E1D66D7F800963FE7 /* PromotionViewController.swift in Sources */,
+				DC6774981D66F73800963FE7 /* PromotionTableViewCell.swift in Sources */,
+				DC67749E1D67028000963FE7 /* AppointmentViewController.swift in Sources */,
+				DC6774A61D67283B00963FE7 /* FeedbackViewController.swift in Sources */,
+				DC6774AC1D673D2100963FE7 /* ChangePasswordProfileViewController.swift in Sources */,
+				DC7441BA1D68723E00914607 /* ServicesViewController.swift in Sources */,
+				DC7441B41D68355300914607 /* VehicleBrandsTableViewCell.swift in Sources */,
+				DC54F0931D6B2F5A007A1847 /* Appointment.swift in Sources */,
+				DC7441B81D686F2200914607 /* AddRequestViewController.swift in Sources */,
+				DC67745E1D66D75B00963FE7 /* AppDelegate.swift in Sources */,
+				DC7441BC1D68725A00914607 /* ServicesTableViewCell.swift in Sources */,
+				DC7441AA1D6834DA00914607 /* VehicleBrandsViewController.swift in Sources */,
+				DC7441AE1D68350E00914607 /* VehicleYearViewController.swift in Sources */,
+				DC6774B01D6740D600963FE7 /* DismissSegue.swift in Sources */,
+				DC6774A21D6702BE00963FE7 /* AppointmentTableViewCell.swift in Sources */,
+				DC7441C01D6874B000914607 /* SSRadioButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC67746C1D66D75B00963FE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6774751D66D75B00963FE7 /* AutoXtion_CustomerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC6774771D66D75B00963FE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6774801D66D75B00963FE7 /* AutoXtion_CustomerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC6774721D66D75B00963FE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC6774591D66D75A00963FE7 /* AutoXtion Customer */;
+			targetProxy = DC6774711D66D75B00963FE7 /* PBXContainerItemProxy */;
+		};
+		DC67747D1D66D75B00963FE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC6774591D66D75A00963FE7 /* AutoXtion Customer */;
+			targetProxy = DC67747C1D66D75B00963FE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC6774631D66D75B00963FE7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC6774641D66D75B00963FE7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC6774681D66D75B00963FE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC6774691D66D75B00963FE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC6774821D66D75B00963FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC6774831D66D75B00963FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC6774851D66D75B00963FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "AutoXtion Customer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ageanalytics.AutoXtion-Customer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC6774861D66D75B00963FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "AutoXtion Customer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ageanalytics.AutoXtion-Customer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC6774881D66D75B00963FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "AutoXtion CustomerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ageanalytics.AutoXtion-CustomerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoXtion Customer.app/AutoXtion Customer";
+			};
+			name = Debug;
+		};
+		DC6774891D66D75B00963FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "AutoXtion CustomerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ageanalytics.AutoXtion-CustomerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoXtion Customer.app/AutoXtion Customer";
+			};
+			name = Release;
+		};
+		DC67748B1D66D75B00963FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "AutoXtion CustomerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ageanalytics.AutoXtion-CustomerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "AutoXtion Customer";
+			};
+			name = Debug;
+		};
+		DC67748C1D66D75B00963FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "AutoXtion CustomerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ageanalytics.AutoXtion-CustomerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "AutoXtion Customer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC6774551D66D75A00963FE7 /* Build configuration list for PBXProject "AutoXtion Customer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6774821D66D75B00963FE7 /* Debug */,
+				DC6774831D66D75B00963FE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC6774841D66D75B00963FE7 /* Build configuration list for PBXNativeTarget "AutoXtion Customer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6774851D66D75B00963FE7 /* Debug */,
+				DC6774861D66D75B00963FE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC6774871D66D75B00963FE7 /* Build configuration list for PBXNativeTarget "AutoXtion CustomerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6774881D66D75B00963FE7 /* Debug */,
+				DC6774891D66D75B00963FE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC67748A1D66D75B00963FE7 /* Build configuration list for PBXNativeTarget "AutoXtion CustomerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC67748B1D66D75B00963FE7 /* Debug */,
+				DC67748C1D66D75B00963FE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC6774521D66D75A00963FE7 /* Project object */;
+}
