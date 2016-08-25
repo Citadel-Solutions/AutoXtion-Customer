@@ -14,6 +14,7 @@ var statusRequest = ""
 var serviceTypeRequest = ""
 var couponCodeRequest = ""
 
+
 class RequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var requestTableView: UITableView!
     
@@ -27,7 +28,7 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     var descriptionList:[String] = []
     var couponCodeList:[String] = []
     var resultCount = 0
-
+    var arr:NSMutableArray = NSMutableArray()
     override func viewDidLoad() {
         super.viewDidLoad()
         getFirstPost()
@@ -61,13 +62,12 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     func getFirstPost() {
         // Get first post
         _ = Alamofire.request(PostRouter.Get("customer_all_promotions"))
-            .responseCollection { (response: Response<[User], BackendError>) in
-                debugPrint("debug", response)
-                print("data", response.data)
-                print("desc", response.description)
-                print("result", response.result.value)
+            .responseObject { (response: Response<User, BackendError>) in
+                print(response.result.value)
         }
+
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

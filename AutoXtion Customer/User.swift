@@ -18,10 +18,5 @@ final class User: ResponseObjectSerializable, ResponseCollectionSerializable {
         self.coupon_code = representation.valueForKeyPath("coupon_code") as! String
         print("code", coupon_code)
     }
-    
-    class func collection(response: NSHTTPURLResponse, representation: AnyObject) -> [User] {
-        let postArray = representation as! [AnyObject]
-        // using the map function we are able to instantiate Post while reusing our init? method above
-        return postArray.map({ User(response:response, representation: $0)! })
-    }
+   
 }
