@@ -50,6 +50,7 @@
 		DC7441BF1D6874B000914607 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */; };
 		DC7441C01D6874B000914607 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BE1D6874B000914607 /* SSRadioButton.swift */; };
 		DC8FF6161D6D684C00079482 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FF6151D6D684C00079482 /* APIClient.swift */; };
+		E99F91EC1D6F331200097777 /* Varaibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F91EB1D6F331200097777 /* Varaibles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		DC7441BE1D6874B000914607 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		DC8FF6151D6D684C00079482 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E99F91EB1D6F331200097777 /* Varaibles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Varaibles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				DC4A4A6B1D6EF38100A46925 /* ResponseObjectSerializable.swift */,
 				DC4A4A6D1D6EF54B00A46925 /* BackendError.swift */,
 				DC4A4A6F1D6EFB5900A46925 /* User.swift */,
+				E99F91EB1D6F331200097777 /* Varaibles.swift */,
 			);
 			path = "AutoXtion Customer";
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				DC6774961D66E68F00963FE7 /* ForgotPasswordViewController.swift in Sources */,
 				DC6774B21D674E2F00963FE7 /* VehicleTableViewCell.swift in Sources */,
 				DC6774941D66E67F00963FE7 /* CustomerLoginViewController.swift in Sources */,
+				E99F91EC1D6F331200097777 /* Varaibles.swift in Sources */,
 				DC67749C1D66FE2F00963FE7 /* RequestViewController.swift in Sources */,
 				DC4A4A701D6EFB5900A46925 /* User.swift in Sources */,
 				DC6774AA1D673CE900963FE7 /* EditProfileViewController.swift in Sources */,

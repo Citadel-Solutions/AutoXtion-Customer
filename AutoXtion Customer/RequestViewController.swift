@@ -10,63 +10,23 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-var statusRequest = ""
-var serviceTypeRequest = ""
-var couponCodeRequest = ""
-
 class RequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var requestTableView: UITableView!
     
-    var requestServiceTypeList:[String] = ["ad","ad","ad"]
-    
-    var requestStatusList:[String] = ["Scheduled", "Job Complete", "Job Complete"]
-    
-    var requestCouponCodeList:[String] = ["No coupon Appilied", "AXNYIZF40", "AXNIMKT12"]
-    
-    var serviceTypeList:[Int] = []
-    var descriptionList:[String] = []
-    var couponCodeList:[String] = []
-    var resultCount = 0
-    var arrRes = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        getFirstPost()
-        
-        // Do any additional setup after loading the view.
-        
-        
-//        Alamofire.request(.GET, "http://202.38.172.167:8010/api/v1/rest/customer_all_request/").responseJSON { (response) -> Void in
-//            if let JSON = response.result.value {
-//                let data = JSON as! NSArray
-//                self.resultCount = data.count
-//                for i in 0..<data.count {
-//                    let serviceType = data[i].valueForKey("service_type") as! Int
-//                    print(serviceType)
-//                    var promotion = data[i].valueForKey("promotion") as? Int
-//                    let description = data[i].valueForKey("description") as! String
-//                    if promotion == nil {
-//                        promotion = 0
-//                    }
-//                    
-//                    self.serviceTypeList.append(serviceType)
-//                    self.couponCodeList.append(promotion!)
-//                    self.descriptionList.append(description)
-//                }
-//               self.requestTableView.reloadData()
-//            }
-//        }
+        getPromotionList()
     }
     
-    
-    func getFirstPost() {
-        // Get first post
+    func getPromotionList() {
         _ = Alamofire.request(PostRouter.Get("customer_all_promotions"))
             .responseCollection { (response: Response<[User], BackendError>) in
-                self.arrRes=response.result.value!
-                for promotionValues in self.arrRes{
-                    self.requestServiceTypeList.append(promotionValues.service)
+                PromotionsVariables.arrRes=response.result.value!
+                for promotionValues in PromotionsVariables.arrRes{
+                    PromotionsVariables.requestServiceTypeList.append(promotionValues.service)
                 }
-                print(self.requestServiceTypeList)
+                print(PromotionsVariables.requestServiceTypeList)
         }
     }
     
@@ -107,20 +67,16 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     //function for the number of rows in each section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return resultCount
-       return requestServiceTypeList.count
+       return PromotionsVariables.requestServiceTypeList.count
     }
     
     //function to assign table data in each row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let requestCellData = tableView.dequeueReusableCellWithIdentifier("requestCell", forIndexPath: indexPath) as! RequestTableViewCell
         
-//        requestCellData.requestServiceTable.text = String(serviceTypeList[indexPath.row])
-//        requestCellData.requestStatusTable.text =  descriptionList[indexPath.row]
-//        requestCellData.requestDateTable.text =  String(couponCodeList[indexPath.row])
-        
-        requestCellData.requestServiceTable.text = requestServiceTypeList[indexPath.row]
-        requestCellData.requestStatusTable.text = requestStatusList[indexPath.row]
-        requestCellData.requestDateTable.text = requestCouponCodeList[indexPath.row]
+        requestCellData.requestServiceTable.text = PromotionsVariables.requestServiceTypeList[indexPath.row]
+        requestCellData.requestStatusTable.text = PromotionsVariables.requestStatusList[indexPath.row]
+        requestCellData.requestDateTable.text = PromotionsVariables.requestCouponCodeList[indexPath.row]
         
         return requestCellData
     }
@@ -128,15 +84,15 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            self.requestServiceTypeList.removeAtIndex(indexPath.row)
+            PromotionsVariables.requestServiceTypeList.removeAtIndex(indexPath.row)
             self.requestTableView.reloadData()
         }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        statusRequest = requestStatusList[indexPath.row]
-        serviceTypeRequest = requestServiceTypeList[indexPath.row]
-        couponCodeRequest = requestCouponCodeList[indexPath.row] 
+        PromotionsVariables.statusRequest = PromotionsVariables.requestStatusList[indexPath.row]
+        PromotionsVariables.serviceTypeRequest = PromotionsVariables.requestServiceTypeList[indexPath.row]
+        PromotionsVariables.couponCodeRequest = PromotionsVariables.requestCouponCodeList[indexPath.row]
     }
     
     /*
