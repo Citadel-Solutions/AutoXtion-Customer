@@ -10,9 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-var statusRequest = ""
-var serviceTypeRequest = ""
-var couponCodeRequest = ""
 
 class RequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -96,7 +93,7 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         PromotionsVariables.statusRequest = PromotionsVariables.requestStatusList[indexPath.row]
         PromotionsVariables.serviceTypeRequest = PromotionsVariables.requestServiceTypeList[indexPath.row]
-        couponCodeRequest = PromotionsVariables.requestCouponCodeList[indexPath.row]
+        PromotionsVariables.couponCodeRequest = PromotionsVariables.requestCouponCodeList[indexPath.row]
     }
     
     /*
