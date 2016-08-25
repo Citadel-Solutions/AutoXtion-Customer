@@ -17,7 +17,7 @@ var couponCodeRequest = ""
 class RequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var requestTableView: UITableView!
     
-    var requestServiceTypeList:[String] = ["Auto Electrical Services", "Engine Management Diagnostics", "Wheel Alignment"]
+    var requestServiceTypeList:[String] = ["ad","ad","ad"]
     
     var requestStatusList:[String] = ["Scheduled", "Job Complete", "Job Complete"]
     
@@ -27,7 +27,7 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     var descriptionList:[String] = []
     var couponCodeList:[String] = []
     var resultCount = 0
-
+    var arrRes = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
         getFirstPost()
@@ -62,10 +62,11 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
         // Get first post
         _ = Alamofire.request(PostRouter.Get("customer_all_promotions"))
             .responseCollection { (response: Response<[User], BackendError>) in
-                debugPrint("debug", response)
-                print("data", response.data)
-                print("desc", response.description)
-                print("result", response.result.value)
+                self.arrRes=response.result.value!
+                for promotionValues in self.arrRes{
+                    self.requestServiceTypeList.append(promotionValues.service)
+                }
+                print(self.requestServiceTypeList)
         }
     }
     
