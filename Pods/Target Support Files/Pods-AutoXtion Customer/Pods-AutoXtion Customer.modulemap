@@ -1,0 +1,6 @@
+framework module Pods_AutoXtion_Customer {
+  umbrella header "Pods-AutoXtion Customer-umbrella.h"
+
+  export *
+  module * { export * }
+}

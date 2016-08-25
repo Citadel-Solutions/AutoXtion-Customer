@@ -9,6 +9,7 @@
 import UIKit
 
 var loginFlag = "0"
+var key = ""
 
 class CustomerLoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -20,6 +21,8 @@ class CustomerLoginViewController: UIViewController {
     
     var email = ""
     var password = ""
+    var statusCode = 0
+    var status = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,13 +101,72 @@ class CustomerLoginViewController: UIViewController {
             let data = try NSJSONSerialization.dataWithJSONObject(json, options: NSJSONWritingOptions(rawValue: 0))
             HTTPPostJSON("http://202.38.172.167:8010/rest-auth/login/", data:data) { (response, error) -> Void in
                 print(response);
-                print()
+        
+                
+                var resultArr = response.characters.split(":").map(String.init)
+                key = resultArr[1]
+                key = key.stringByReplacingOccurrencesOfString("\"", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                key = String(key.characters.dropLast())
+                print("final Key", key)
+               
+                
+                print("function", self.statusCode)
+                //self.showResult()
+                
+//                let request = NSMutableURLRequest(URL: NSURL(string: "http://202.38.172.167:8010/api/v1/rest/customer_all_appointment/")!,
+//                                                  cachePolicy: .UseProtocolCachePolicy,
+//                                                  timeoutInterval: 10.0)
+//                request.HTTPMethod = "GET"
+//                
+//                //request.allHTTPHeaderFields = headers
+//                
+//                let session = NSURLSession.sharedSession()
+//                let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+//                    
+////                    if (error != nil) {
+////                        print(error)
+////                    } else {
+////                        print(response)
+////                        let httpResponse = response as? NSHTTPURLResponse
+////                        print(httpResponse?.description)
+////                        
+////                        print(response?.description)
+////                        
+////                        
+////                    }
+//                   
+//                    do {
+//                    let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
+//                    
+//                    let userResultCount = jsonResult.count
+//                    print(userResultCount)
+//                    
+//                        for anItem in jsonResult as! [Dictionary<String, AnyObject>] {
+//                            let personName = anItem["id"] as! String
+//                            print(personName)
+//                            // do something with personName and personID
+//                        }
+//                    } catch let error as NSError {
+//                        
+//                        print(error)
+//                        
+//                    }
+//                    
+//                })
+//                
+//                dataTask.resume()
             }
+            print("out", status)
+            print("code", self.status)
+            
+
         }
         catch {
             print("Username/Password is incorrect.")
             // showAlert()
         }
+        
+        
     }
     
     func HTTPsendRequest(request: NSMutableURLRequest,
@@ -114,7 +176,9 @@ class CustomerLoginViewController: UIViewController {
                 (data, response, error) -> Void in
                 
                 let httpResponse = response as! NSHTTPURLResponse
-                print("In", httpResponse.statusCode)
+                self.statusCode = httpResponse.statusCode
+
+                print("In", self.statusCode)
                 if (error != nil) {
                     callback("", error!.localizedDescription)
                 } else {
@@ -148,7 +212,7 @@ class CustomerLoginViewController: UIViewController {
         myAlert.addAction(okAction)
         self.presentViewController(myAlert, animated: true, completion: nil)
     }
-
+  
     /*
     // MARK: - Navigation
 

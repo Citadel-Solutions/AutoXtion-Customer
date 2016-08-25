@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC54F0931D6B2F5A007A1847 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54F0921D6B2F5A007A1847 /* Appointment.swift */; };
+		6B5CA061E59401BAA8226BC0 /* Pods_AutoXtion_Customer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA9BA950342E91454D6C65D /* Pods_AutoXtion_Customer.framework */; };
+		DC4A4A691D6EEE8D00A46925 /* ResponseCollectionSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4A4A681D6EEE8D00A46925 /* ResponseCollectionSerializable.swift */; };
+		DC4A4A6C1D6EF38100A46925 /* ResponseObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4A4A6B1D6EF38100A46925 /* ResponseObjectSerializable.swift */; };
+		DC4A4A6E1D6EF54B00A46925 /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4A4A6D1D6EF54B00A46925 /* BackendError.swift */; };
+		DC4A4A701D6EFB5900A46925 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4A4A6F1D6EFB5900A46925 /* User.swift */; };
 		DC67745E1D66D75B00963FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67745D1D66D75B00963FE7 /* AppDelegate.swift */; };
 		DC6774651D66D75B00963FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6774631D66D75B00963FE7 /* Main.storyboard */; };
 		DC6774671D66D75B00963FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6774661D66D75B00963FE7 /* Assets.xcassets */; };
@@ -45,6 +49,7 @@
 		DC7441BC1D68725A00914607 /* ServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BB1D68725A00914607 /* ServicesTableViewCell.swift */; };
 		DC7441BF1D6874B000914607 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */; };
 		DC7441C01D6874B000914607 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BE1D6874B000914607 /* SSRadioButton.swift */; };
+		DC8FF6161D6D684C00079482 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FF6151D6D684C00079482 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +70,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC54F0921D6B2F5A007A1847 /* Appointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		0B1FD6F00F1ADA63AAEF928F /* Pods-AutoXtion Customer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoXtion Customer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoXtion Customer/Pods-AutoXtion Customer.debug.xcconfig"; sourceTree = "<group>"; };
+		188DD58F8E7DB9DB6FA245D6 /* Pods_AutoXtion_CustomerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoXtion_CustomerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		458F8B5F9628F2D75B7D05BF /* Pods-AutoXtion Customer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoXtion Customer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoXtion Customer/Pods-AutoXtion Customer.release.xcconfig"; sourceTree = "<group>"; };
+		74209DA2DC4A5843FF1A67D8 /* Pods_AutoXtion_CustomerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoXtion_CustomerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFA9BA950342E91454D6C65D /* Pods_AutoXtion_Customer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoXtion_Customer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4A4A681D6EEE8D00A46925 /* ResponseCollectionSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCollectionSerializable.swift; sourceTree = "<group>"; };
+		DC4A4A6B1D6EF38100A46925 /* ResponseObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObjectSerializable.swift; sourceTree = "<group>"; };
+		DC4A4A6D1D6EF54B00A46925 /* BackendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
+		DC4A4A6F1D6EFB5900A46925 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DC67745A1D66D75A00963FE7 /* AutoXtion Customer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AutoXtion Customer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC67745D1D66D75B00963FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC6774641D66D75B00963FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +122,7 @@
 		DC7441BB1D68725A00914607 /* ServicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewCell.swift; sourceTree = "<group>"; };
 		DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		DC7441BE1D6874B000914607 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
+		DC8FF6151D6D684C00079482 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5CA061E59401BAA8226BC0 /* Pods_AutoXtion_Customer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +151,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D794456AD3B1E7790897DE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFA9BA950342E91454D6C65D /* Pods_AutoXtion_Customer.framework */,
+				188DD58F8E7DB9DB6FA245D6 /* Pods_AutoXtion_CustomerTests.framework */,
+				74209DA2DC4A5843FF1A67D8 /* Pods_AutoXtion_CustomerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAA79891571A2DF42A49EED9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B1FD6F00F1ADA63AAEF928F /* Pods-AutoXtion Customer.debug.xcconfig */,
+				458F8B5F9628F2D75B7D05BF /* Pods-AutoXtion Customer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DC6774511D66D75A00963FE7 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +177,8 @@
 				DC6774731D66D75B00963FE7 /* AutoXtion CustomerTests */,
 				DC67747E1D66D75B00963FE7 /* AutoXtion CustomerUITests */,
 				DC67745B1D66D75A00963FE7 /* Products */,
+				BAA79891571A2DF42A49EED9 /* Pods */,
+				6D794456AD3B1E7790897DE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +202,7 @@
 				DC6774661D66D75B00963FE7 /* Assets.xcassets */,
 				DC6774681D66D75B00963FE7 /* LaunchScreen.storyboard */,
 				DC67746B1D66D75B00963FE7 /* Info.plist */,
+				DC6774A11D6702BE00963FE7 /* AppointmentTableViewCell.swift */,
 				DC67748D1D66D7F800963FE7 /* PromotionViewController.swift */,
 				DC67748F1D66D84200963FE7 /* CustomerVehiclesViewController.swift */,
 				DC6774AD1D6740D600963FE7 /* CustomView.swift */,
@@ -177,7 +214,6 @@
 				DC6774991D66FE1300963FE7 /* RequestTableViewCell.swift */,
 				DC67749B1D66FE2F00963FE7 /* RequestViewController.swift */,
 				DC67749D1D67028000963FE7 /* AppointmentViewController.swift */,
-				DC6774A11D6702BE00963FE7 /* AppointmentTableViewCell.swift */,
 				DC6774A31D6727ED00963FE7 /* VehicleViewController.swift */,
 				DC6774A51D67283B00963FE7 /* FeedbackViewController.swift */,
 				DC6774A71D673C8500963FE7 /* SettingTableViewController.swift */,
@@ -195,7 +231,11 @@
 				DC7441B71D686F2200914607 /* AddRequestViewController.swift */,
 				DC7441B91D68723E00914607 /* ServicesViewController.swift */,
 				DC7441BB1D68725A00914607 /* ServicesTableViewCell.swift */,
-				DC54F0921D6B2F5A007A1847 /* Appointment.swift */,
+				DC8FF6151D6D684C00079482 /* APIClient.swift */,
+				DC4A4A681D6EEE8D00A46925 /* ResponseCollectionSerializable.swift */,
+				DC4A4A6B1D6EF38100A46925 /* ResponseObjectSerializable.swift */,
+				DC4A4A6D1D6EF54B00A46925 /* BackendError.swift */,
+				DC4A4A6F1D6EFB5900A46925 /* User.swift */,
 			);
 			path = "AutoXtion Customer";
 			sourceTree = "<group>";
@@ -225,9 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC6774841D66D75B00963FE7 /* Build configuration list for PBXNativeTarget "AutoXtion Customer" */;
 			buildPhases = (
+				131119AC605F131C16210DB7 /* [CP] Check Pods Manifest.lock */,
 				DC6774561D66D75A00963FE7 /* Sources */,
 				DC6774571D66D75A00963FE7 /* Frameworks */,
 				DC6774581D66D75A00963FE7 /* Resources */,
+				17BB5E34FCFE7145AC1293F4 /* [CP] Embed Pods Frameworks */,
+				5112AB43E44C521976940605 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC6774871D66D75B00963FE7 /* Build configuration list for PBXNativeTarget "AutoXtion CustomerTests" */;
 			buildPhases = (
+				9AFE69A53D28AB029D2DA061 /* [CP] Check Pods Manifest.lock */,
 				DC67746C1D66D75B00963FE7 /* Sources */,
 				DC67746D1D66D75B00963FE7 /* Frameworks */,
 				DC67746E1D66D75B00963FE7 /* Resources */,
+				897A2A7D0A6DD97EFFA9917E /* [CP] Embed Pods Frameworks */,
+				B35018F4DB2C40D6195B257C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC67748A1D66D75B00963FE7 /* Build configuration list for PBXNativeTarget "AutoXtion CustomerUITests" */;
 			buildPhases = (
+				840CE2DBD454C52971643139 /* [CP] Check Pods Manifest.lock */,
 				DC6774771D66D75B00963FE7 /* Sources */,
 				DC6774781D66D75B00963FE7 /* Frameworks */,
 				DC6774791D66D75B00963FE7 /* Resources */,
+				E30B7885C35C0A3F19F11013 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -345,12 +393,137 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		131119AC605F131C16210DB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		17BB5E34FCFE7145AC1293F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoXtion Customer/Pods-AutoXtion Customer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5112AB43E44C521976940605 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoXtion Customer/Pods-AutoXtion Customer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		840CE2DBD454C52971643139 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		897A2A7D0A6DD97EFFA9917E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoXtion CustomerTests/Pods-AutoXtion CustomerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AFE69A53D28AB029D2DA061 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B35018F4DB2C40D6195B257C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoXtion CustomerTests/Pods-AutoXtion CustomerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E30B7885C35C0A3F19F11013 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoXtion CustomerUITests/Pods-AutoXtion CustomerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC6774561D66D75A00963FE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DC6774A81D673C8500963FE7 /* SettingTableViewController.swift in Sources */,
+				DC8FF6161D6D684C00079482 /* APIClient.swift in Sources */,
+				DC4A4A6C1D6EF38100A46925 /* ResponseObjectSerializable.swift in Sources */,
 				DC7441A81D68332300914607 /* AddVehicleViewController.swift in Sources */,
 				DC6774901D66D84200963FE7 /* CustomerVehiclesViewController.swift in Sources */,
 				DC6774A41D6727ED00963FE7 /* VehicleViewController.swift in Sources */,
@@ -358,12 +531,15 @@
 				DC7441B61D686F1300914607 /* PromotionRequestViewController.swift in Sources */,
 				DC67749A1D66FE1300963FE7 /* RequestTableViewCell.swift in Sources */,
 				DC7441B21D68353F00914607 /* VehicleModelsTableViewCell.swift in Sources */,
+				DC4A4A691D6EEE8D00A46925 /* ResponseCollectionSerializable.swift in Sources */,
+				DC4A4A6E1D6EF54B00A46925 /* BackendError.swift in Sources */,
 				DC7441B01D68352A00914607 /* VehicleYearTableViewCell.swift in Sources */,
 				DC6774921D66E4B700963FE7 /* CustomerLaunchViewController.swift in Sources */,
 				DC6774961D66E68F00963FE7 /* ForgotPasswordViewController.swift in Sources */,
 				DC6774B21D674E2F00963FE7 /* VehicleTableViewCell.swift in Sources */,
 				DC6774941D66E67F00963FE7 /* CustomerLoginViewController.swift in Sources */,
 				DC67749C1D66FE2F00963FE7 /* RequestViewController.swift in Sources */,
+				DC4A4A701D6EFB5900A46925 /* User.swift in Sources */,
 				DC6774AA1D673CE900963FE7 /* EditProfileViewController.swift in Sources */,
 				DC6774AF1D6740D600963FE7 /* CustomView.swift in Sources */,
 				DC7441AC1D6834FD00914607 /* VehicleModelViewController.swift in Sources */,
@@ -374,7 +550,6 @@
 				DC6774AC1D673D2100963FE7 /* ChangePasswordProfileViewController.swift in Sources */,
 				DC7441BA1D68723E00914607 /* ServicesViewController.swift in Sources */,
 				DC7441B41D68355300914607 /* VehicleBrandsTableViewCell.swift in Sources */,
-				DC54F0931D6B2F5A007A1847 /* Appointment.swift in Sources */,
 				DC7441B81D686F2200914607 /* AddRequestViewController.swift in Sources */,
 				DC67745E1D66D75B00963FE7 /* AppDelegate.swift in Sources */,
 				DC7441BC1D68725A00914607 /* ServicesTableViewCell.swift in Sources */,
@@ -524,6 +699,7 @@
 		};
 		DC6774851D66D75B00963FE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B1FD6F00F1ADA63AAEF928F /* Pods-AutoXtion Customer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -536,6 +712,7 @@
 		};
 		DC6774861D66D75B00963FE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 458F8B5F9628F2D75B7D05BF /* Pods-AutoXtion Customer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

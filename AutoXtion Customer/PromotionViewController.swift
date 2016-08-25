@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 var addPromotionClicked = "no"
 
@@ -24,12 +26,41 @@ class PromotionViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getFirstPost()
 
         // Do any additional setup after loading the view.
         //let barItemColor = UIColor(red: 243/255.0, green: 134/255.0, blue: 25/255.0, alpha: 1.0)
         
         //navigationController?.navigationBar.tintColor = barItemColor
 
+    }
+    
+    func getFirstPost() {
+        // Get first post
+        let request = Alamofire.request(PostRouter.Get("customer_all_promotions"))
+            .responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling GET on /posts/1")
+                    print(response.result.error!)
+                    return
+                }
+                
+                if let value: AnyObject = response.result.value {
+                    // handle the results as JSON, without a bunch of nested if loops
+                    let post = JSON(value)
+                    // now we have the results, let's just print them though a tableview would definitely be better UI:
+                    print("The post is: " + post.description)
+                    if let title = post["coupon_code"].string {
+                        // to access a field:
+                        print("The title is: " + title)
+                    } else {
+                        print("error parsing /posts/1")
+                    }
+                }
+        }
+        debugPrint(request)
     }
 
     override func didReceiveMemoryWarning() {

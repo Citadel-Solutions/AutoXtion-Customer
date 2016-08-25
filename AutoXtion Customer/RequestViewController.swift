@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 var statusRequest = ""
 var serviceTypeRequest = ""
@@ -20,13 +22,53 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     var requestStatusList:[String] = ["Scheduled", "Job Complete", "Job Complete"]
     
     var requestCouponCodeList:[String] = ["No coupon Appilied", "AXNYIZF40", "AXNIMKT12"]
+    
+    var serviceTypeList:[Int] = []
+    var descriptionList:[String] = []
+    var couponCodeList:[String] = []
+    var resultCount = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getFirstPost()
+        
         // Do any additional setup after loading the view.
+        
+        
+//        Alamofire.request(.GET, "http://202.38.172.167:8010/api/v1/rest/customer_all_request/").responseJSON { (response) -> Void in
+//            if let JSON = response.result.value {
+//                let data = JSON as! NSArray
+//                self.resultCount = data.count
+//                for i in 0..<data.count {
+//                    let serviceType = data[i].valueForKey("service_type") as! Int
+//                    print(serviceType)
+//                    var promotion = data[i].valueForKey("promotion") as? Int
+//                    let description = data[i].valueForKey("description") as! String
+//                    if promotion == nil {
+//                        promotion = 0
+//                    }
+//                    
+//                    self.serviceTypeList.append(serviceType)
+//                    self.couponCodeList.append(promotion!)
+//                    self.descriptionList.append(description)
+//                }
+//               self.requestTableView.reloadData()
+//            }
+//        }
     }
-
+    
+    
+    func getFirstPost() {
+        // Get first post
+        _ = Alamofire.request(PostRouter.Get("customer_all_promotions"))
+            .responseCollection { (response: Response<[User], BackendError>) in
+                debugPrint("debug", response)
+                print("data", response.data)
+                print("desc", response.description)
+                print("result", response.result.value)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -63,15 +105,20 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //function for the number of rows in each section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return requestServiceTypeList.count
+        //return resultCount
+       return requestServiceTypeList.count
     }
     
     //function to assign table data in each row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let requestCellData = tableView.dequeueReusableCellWithIdentifier("requestCell", forIndexPath: indexPath) as! RequestTableViewCell
         
+//        requestCellData.requestServiceTable.text = String(serviceTypeList[indexPath.row])
+//        requestCellData.requestStatusTable.text =  descriptionList[indexPath.row]
+//        requestCellData.requestDateTable.text =  String(couponCodeList[indexPath.row])
+        
         requestCellData.requestServiceTable.text = requestServiceTypeList[indexPath.row]
-        requestCellData.requestStatusTable.text = requestServiceTypeList[indexPath.row]
+        requestCellData.requestStatusTable.text = requestStatusList[indexPath.row]
         requestCellData.requestDateTable.text = requestCouponCodeList[indexPath.row]
         
         return requestCellData
