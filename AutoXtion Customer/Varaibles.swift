@@ -9,11 +9,14 @@
 import Foundation
 
 struct PromotionsVariables {
-    static var requestServiceTypeList:[String] = ["ad","ad","ad"]
+    static var requestServiceTypeList:[String] = ["asda","asd"]
     static var requestStatusList:[String] = ["Scheduled", "Job Complete", "Job Complete"]
     static var requestCouponCodeList:[String] = ["No coupon Appilied", "AXNYIZF40", "AXNIMKT12"]
     static var arrRes = [User]()
     static var statusRequest = ""
     static var serviceTypeRequest = ""
     static var couponCodeRequest = ""
+    
+    //static var requestServiceTypeList: Set<String> = ["Rock", "Classical", "Hip hop"]
+    
 }
