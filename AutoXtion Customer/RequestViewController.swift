@@ -18,7 +18,7 @@ var couponCodeRequest = ""
 class RequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var requestTableView: UITableView!
     
-    var requestServiceTypeList:[String] = ["Auto Electrical Services", "Engine Management Diagnostics", "Wheel Alignment"]
+    var requestServiceTypeList:[String] = ["ad","ad","ad"]
     
     var requestStatusList:[String] = ["Scheduled", "Job Complete", "Job Complete"]
     
