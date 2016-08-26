@@ -108,7 +108,7 @@ class CustomerLoginViewController: UIViewController {
                 
                 print("function", self.statusCode)
                 
-                self.getRequestList()
+               //self.getRequestList()
                 
                 
                 
