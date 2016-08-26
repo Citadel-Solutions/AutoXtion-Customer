@@ -17,17 +17,19 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getPromotionList()
+        getRequestList()
     }
     
-    func getPromotionList() {
-        _ = Alamofire.request(PostRouter.Get("customer_all_promotions"))
-            .responseCollection { (response: Response<[User], BackendError>) in
-                PromotionsVariables.arrRes=response.result.value!
-                for promotionValues in PromotionsVariables.arrRes{
-                    PromotionsVariables.requestServiceTypeList.append(promotionValues.service)
+    func getRequestList() {
+        _ = Alamofire.request(PostRouter.Get("customer_all_request"))
+            .responseCollection { (response: Response<[ServiceRequest], BackendError>) in
+                RequestVariables.arrRes=response.result.value!
+                for promotionValues in RequestVariables.arrRes{
+                    RequestVariables.requestServiceTypeList.append(promotionValues.service)
+                    RequestVariables.requestCouponCodeList.append(promotionValues.promotion!)
                 }
-                print(PromotionsVariables.requestServiceTypeList)
+                print(RequestVariables.requestServiceTypeList)
+                self.requestTableView.reloadData()
         }
     }
     
@@ -68,16 +70,16 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     //function for the number of rows in each section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return resultCount
-       return PromotionsVariables.requestServiceTypeList.count
+       return RequestVariables.requestServiceTypeList.count
     }
     
     //function to assign table data in each row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let requestCellData = tableView.dequeueReusableCellWithIdentifier("requestCell", forIndexPath: indexPath) as! RequestTableViewCell
         
-        requestCellData.requestServiceTable.text = PromotionsVariables.requestServiceTypeList[indexPath.row]
-        requestCellData.requestStatusTable.text = PromotionsVariables.requestStatusList[indexPath.row]
-        requestCellData.requestDateTable.text = PromotionsVariables.requestCouponCodeList[indexPath.row]
+        requestCellData.requestServiceTable.text = RequestVariables.requestServiceTypeList[indexPath.row]
+        requestCellData.requestStatusTable.text = RequestVariables.requestStatusList[indexPath.row]
+        requestCellData.requestDateTable.text = RequestVariables.requestCouponCodeList[indexPath.row]
         
         return requestCellData
     }
@@ -85,15 +87,15 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            PromotionsVariables.requestServiceTypeList.removeAtIndex(indexPath.row)
+            RequestVariables.requestServiceTypeList.removeAtIndex(indexPath.row)
             self.requestTableView.reloadData()
         }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        PromotionsVariables.statusRequest = PromotionsVariables.requestStatusList[indexPath.row]
-        PromotionsVariables.serviceTypeRequest = PromotionsVariables.requestServiceTypeList[indexPath.row]
-        PromotionsVariables.couponCodeRequest = PromotionsVariables.requestCouponCodeList[indexPath.row]
+        RequestVariables.statusRequest = RequestVariables.requestStatusList[indexPath.row]
+        RequestVariables.serviceTypeRequest = RequestVariables.requestServiceTypeList[indexPath.row]
+        RequestVariables.couponCodeRequest = RequestVariables.requestCouponCodeList[indexPath.row]
     }
     
     /*

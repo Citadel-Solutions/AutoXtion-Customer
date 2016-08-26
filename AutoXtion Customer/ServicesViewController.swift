@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 var requestServiceSelected = ""
 
 class ServicesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var requestServiceTable: UITableView!
-    
-    var requestServiceList:[String] = ["Log Book Service", "Full Car Service", "Repairs", "Maintenance", "LPG Installations", "Tyres", "Wheel Alignment", "Air Conditioning Repair & Services", "Auto Electrical Services", "Brakes"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         requestServiceTable.contentInset = UIEdgeInsetsZero
+        getServicesList()
+    }
+    
+    func getServicesList() {
+        _ = Alamofire.request(PostRouter.Get("get_all_ServiceType"))
+            .responseCollection { (response: Response<[Services], BackendError>) in
+                ServicesVariables.arrRes=response.result.value!
+                for promotionValues in ServicesVariables.arrRes{
+                    ServicesVariables.requestServiceList.append(promotionValues.service_type)
+                    ServicesVariables.serviceIdList.append(promotionValues.id)
+                }
+                print(ServicesVariables.serviceIdList)
+                self.requestServiceTable.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,22 +72,23 @@ class ServicesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     //function for the number of rows in each section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return requestServiceList.count
+        return ServicesVariables.requestServiceList.count
     }
     
     //function to assign table data in each row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let requestServiceCellData = tableView.dequeueReusableCellWithIdentifier("serviceTypeCell", forIndexPath: indexPath) as! ServicesTableViewCell
         
-        requestServiceCellData.requestServiceType.text = requestServiceList[indexPath.row]
+        requestServiceCellData.requestServiceType.text = ServicesVariables.requestServiceList[indexPath.row]
         
-        requestServiceCellData.requestServiceType.tag = indexPath.row
+        requestServiceCellData.requestServiceType.tag = ServicesVariables.serviceIdList[indexPath.row]
         
         return requestServiceCellData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        requestServiceSelected = requestServiceList[indexPath.row]
+        requestServiceSelected = String(ServicesVariables.serviceIdList[indexPath.row])
+        print("Service selected", requestServiceSelected)
     }
     
 

@@ -50,6 +50,18 @@
 		DC7441BF1D6874B000914607 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */; };
 		DC7441C01D6874B000914607 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BE1D6874B000914607 /* SSRadioButton.swift */; };
 		DC8FF6161D6D684C00079482 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FF6151D6D684C00079482 /* APIClient.swift */; };
+		DCF8A6C41D70421500B089F4 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6C31D70421500B089F4 /* ServiceRequest.swift */; };
+		DCF8A6C61D7042DA00B089F4 /* RequestVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6C51D7042DA00B089F4 /* RequestVariables.swift */; };
+		DCF8A6C81D704C4B00B089F4 /* ServiceAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6C71D704C4B00B089F4 /* ServiceAppointment.swift */; };
+		DCF8A6CA1D704ED800B089F4 /* AppointmentVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6C91D704ED800B089F4 /* AppointmentVariables.swift */; };
+		DCF8A6CC1D70543700B089F4 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6CB1D70543700B089F4 /* Vehicle.swift */; };
+		DCF8A6CE1D7055B600B089F4 /* VehicleVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6CD1D7055B600B089F4 /* VehicleVariables.swift */; };
+		DCF8A6D01D705A9C00B089F4 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6CF1D705A9C00B089F4 /* Services.swift */; };
+		DCF8A6D21D705AEB00B089F4 /* ServicesVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6D11D705AEB00B089F4 /* ServicesVariables.swift */; };
+		DCF8A6D41D7065F500B089F4 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6D31D7065F500B089F4 /* VehicleModel.swift */; };
+		DCF8A6D61D7066F300B089F4 /* VehicleModelVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6D51D7066F300B089F4 /* VehicleModelVariables.swift */; };
+		DCF8A7501D7083B300B089F4 /* CustomerId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A74F1D7083B300B089F4 /* CustomerId.swift */; };
+		DCF8A7521D7083FE00B089F4 /* CustomerIdVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A7511D7083FE00B089F4 /* CustomerIdVariables.swift */; };
 		E99F91EC1D6F331200097777 /* Varaibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F91EB1D6F331200097777 /* Varaibles.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +136,18 @@
 		DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		DC7441BE1D6874B000914607 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		DC8FF6151D6D684C00079482 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		DCF8A6C31D70421500B089F4 /* ServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
+		DCF8A6C51D7042DA00B089F4 /* RequestVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestVariables.swift; sourceTree = "<group>"; };
+		DCF8A6C71D704C4B00B089F4 /* ServiceAppointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAppointment.swift; sourceTree = "<group>"; };
+		DCF8A6C91D704ED800B089F4 /* AppointmentVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentVariables.swift; sourceTree = "<group>"; };
+		DCF8A6CB1D70543700B089F4 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		DCF8A6CD1D7055B600B089F4 /* VehicleVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleVariables.swift; sourceTree = "<group>"; };
+		DCF8A6CF1D705A9C00B089F4 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		DCF8A6D11D705AEB00B089F4 /* ServicesVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesVariables.swift; sourceTree = "<group>"; };
+		DCF8A6D31D7065F500B089F4 /* VehicleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
+		DCF8A6D51D7066F300B089F4 /* VehicleModelVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelVariables.swift; sourceTree = "<group>"; };
+		DCF8A74F1D7083B300B089F4 /* CustomerId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerId.swift; sourceTree = "<group>"; };
+		DCF8A7511D7083FE00B089F4 /* CustomerIdVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerIdVariables.swift; sourceTree = "<group>"; };
 		E99F91EB1D6F331200097777 /* Varaibles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Varaibles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +263,18 @@
 				DC4A4A6D1D6EF54B00A46925 /* BackendError.swift */,
 				DC4A4A6F1D6EFB5900A46925 /* User.swift */,
 				E99F91EB1D6F331200097777 /* Varaibles.swift */,
+				DCF8A6C31D70421500B089F4 /* ServiceRequest.swift */,
+				DCF8A6C51D7042DA00B089F4 /* RequestVariables.swift */,
+				DCF8A6C71D704C4B00B089F4 /* ServiceAppointment.swift */,
+				DCF8A6C91D704ED800B089F4 /* AppointmentVariables.swift */,
+				DCF8A6CB1D70543700B089F4 /* Vehicle.swift */,
+				DCF8A6CD1D7055B600B089F4 /* VehicleVariables.swift */,
+				DCF8A6CF1D705A9C00B089F4 /* Services.swift */,
+				DCF8A6D11D705AEB00B089F4 /* ServicesVariables.swift */,
+				DCF8A6D31D7065F500B089F4 /* VehicleModel.swift */,
+				DCF8A6D51D7066F300B089F4 /* VehicleModelVariables.swift */,
+				DCF8A74F1D7083B300B089F4 /* CustomerId.swift */,
+				DCF8A7511D7083FE00B089F4 /* CustomerIdVariables.swift */,
 			);
 			path = "AutoXtion Customer";
 			sourceTree = "<group>";
@@ -525,16 +561,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC6774A81D673C8500963FE7 /* SettingTableViewController.swift in Sources */,
+				DCF8A6CA1D704ED800B089F4 /* AppointmentVariables.swift in Sources */,
 				DC8FF6161D6D684C00079482 /* APIClient.swift in Sources */,
+				DCF8A6D21D705AEB00B089F4 /* ServicesVariables.swift in Sources */,
 				DC4A4A6C1D6EF38100A46925 /* ResponseObjectSerializable.swift in Sources */,
 				DC7441A81D68332300914607 /* AddVehicleViewController.swift in Sources */,
+				DCF8A7501D7083B300B089F4 /* CustomerId.swift in Sources */,
 				DC6774901D66D84200963FE7 /* CustomerVehiclesViewController.swift in Sources */,
+				DCF8A6CE1D7055B600B089F4 /* VehicleVariables.swift in Sources */,
 				DC6774A41D6727ED00963FE7 /* VehicleViewController.swift in Sources */,
 				DC7441BF1D6874B000914607 /* SSRadioButtonsController.swift in Sources */,
+				DCF8A6D41D7065F500B089F4 /* VehicleModel.swift in Sources */,
 				DC7441B61D686F1300914607 /* PromotionRequestViewController.swift in Sources */,
 				DC67749A1D66FE1300963FE7 /* RequestTableViewCell.swift in Sources */,
 				DC7441B21D68353F00914607 /* VehicleModelsTableViewCell.swift in Sources */,
+				DCF8A6CC1D70543700B089F4 /* Vehicle.swift in Sources */,
 				DC4A4A691D6EEE8D00A46925 /* ResponseCollectionSerializable.swift in Sources */,
+				DCF8A6C61D7042DA00B089F4 /* RequestVariables.swift in Sources */,
+				DCF8A6C41D70421500B089F4 /* ServiceRequest.swift in Sources */,
 				DC4A4A6E1D6EF54B00A46925 /* BackendError.swift in Sources */,
 				DC7441B01D68352A00914607 /* VehicleYearTableViewCell.swift in Sources */,
 				DC6774921D66E4B700963FE7 /* CustomerLaunchViewController.swift in Sources */,
@@ -544,10 +588,13 @@
 				E99F91EC1D6F331200097777 /* Varaibles.swift in Sources */,
 				DC67749C1D66FE2F00963FE7 /* RequestViewController.swift in Sources */,
 				DC4A4A701D6EFB5900A46925 /* User.swift in Sources */,
+				DCF8A6D01D705A9C00B089F4 /* Services.swift in Sources */,
 				DC6774AA1D673CE900963FE7 /* EditProfileViewController.swift in Sources */,
 				DC6774AF1D6740D600963FE7 /* CustomView.swift in Sources */,
 				DC7441AC1D6834FD00914607 /* VehicleModelViewController.swift in Sources */,
+				DCF8A7521D7083FE00B089F4 /* CustomerIdVariables.swift in Sources */,
 				DC67748E1D66D7F800963FE7 /* PromotionViewController.swift in Sources */,
+				DCF8A6D61D7066F300B089F4 /* VehicleModelVariables.swift in Sources */,
 				DC6774981D66F73800963FE7 /* PromotionTableViewCell.swift in Sources */,
 				DC67749E1D67028000963FE7 /* AppointmentViewController.swift in Sources */,
 				DC6774A61D67283B00963FE7 /* FeedbackViewController.swift in Sources */,
@@ -562,6 +609,7 @@
 				DC6774B01D6740D600963FE7 /* DismissSegue.swift in Sources */,
 				DC6774A21D6702BE00963FE7 /* AppointmentTableViewCell.swift in Sources */,
 				DC7441C01D6874B000914607 /* SSRadioButton.swift in Sources */,
+				DCF8A6C81D704C4B00B089F4 /* ServiceAppointment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

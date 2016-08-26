@@ -7,18 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 var vehicleModelSelected = ""
 
 class VehicleModelViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var vehicleModelTableView: UITableView!
-    
-    var vehicleModel: [String] = [String]()
-    var bonluckList:[String] = ["JXK6120", "JXK6180"]
-    var dodgeList:[String] = ["AVENGER", "CALIBER", "JOURNEY", "NITRO"]
-    var havalList:[String] = ["H2", "H8", "H9"]
-    var jmcList:[String] = ["VIGUS"]
-    var lotusList:[String] = ["ELAN", "ELISE", "ESPRIT", "EUROPA", "EVORA", "EXCEL", "EXIGE"]
     
     var arraySize = 0
 
@@ -28,45 +23,21 @@ class VehicleModelViewController: UIViewController, UITableViewDataSource, UITab
         // Do any additional setup after loading the view.
         vehicleModelTableView.contentInset = UIEdgeInsetsZero
         print(vehicleBrandSelected)
-        
-        if(vehicleBrandSelected == "BONLUCK BLK") {
-            //arraySize = bonluckList.count
-            vehicleModel.removeAll()
-            for i in 0..<bonluckList.count {
-                vehicleModel.append(bonluckList[i])
-            }
-        }
-        else if(vehicleBrandSelected == "DODGE") {
-            vehicleModel.removeAll()
-            vehicleModel = [String]()
-            print(vehicleModel.count)
-            for i in 0..<dodgeList.count {
-                vehicleModel.append(dodgeList[i])
-            }
-        }
-        else if(vehicleBrandSelected == "HAVAL") {
-            vehicleModel.removeAll()
-            vehicleModel = [String]()
-            print(vehicleModel.count)
-            for i in 0..<havalList.count {
-                vehicleModel.append(havalList[i])
-            }
-        }
-        else if(vehicleBrandSelected == "JMC") {
-            vehicleModel.removeAll()
-            vehicleModel = [String]()
-            print(vehicleModel.count)
-            for i in 0..<jmcList.count {
-                vehicleModel.append(jmcList[i])
-            }
-        }
-        else if(vehicleBrandSelected == "LOTUS") {
-            vehicleModel.removeAll()
-            vehicleModel = [String]()
-            print(vehicleModel.count)
-            for i in 0..<lotusList.count {
-                vehicleModel.append(lotusList[i])
-            }
+        getVehicleModelList()
+    }
+    
+    func getVehicleModelList() {
+        VehicleModelVariables.vehicleModelList.removeAll()
+        VehicleModelVariables.vehicleModelIdList.removeAll()
+        _ = Alamofire.request(PostRouter.Get("get_all_CarModel/\(vehicleBrandSelected)"))
+            .responseCollection { (response: Response<[VehicleModel], BackendError>) in
+                VehicleModelVariables.arrRes=response.result.value!
+                for promotionValues in VehicleModelVariables.arrRes{
+                    VehicleModelVariables.vehicleModelList.append(promotionValues.model_name)
+                    VehicleModelVariables.vehicleModelIdList.append(promotionValues.id)
+                }
+                print(VehicleModelVariables.vehicleModelList)
+                self.vehicleModelTableView.reloadData()
         }
     }
 
@@ -107,21 +78,22 @@ class VehicleModelViewController: UIViewController, UITableViewDataSource, UITab
     //*********************************************************************************************************************
     //function for the number of rows in each section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vehicleModel.count
+        return VehicleModelVariables.vehicleModelList.count
     }
     
     //function to assign table data in each row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let vehicleModelCellData = tableView.dequeueReusableCellWithIdentifier("vehicleModelCell", forIndexPath: indexPath) as! VehicleModelsTableViewCell
         
-        vehicleModelCellData.vehicleModel.text = vehicleModel[indexPath.row]
-        vehicleModelCellData.vehicleModel.tag = indexPath.row
+        vehicleModelCellData.vehicleModel.text = VehicleModelVariables.vehicleModelList[indexPath.row]
+        vehicleModelCellData.vehicleModel.tag = VehicleModelVariables.vehicleModelIdList[indexPath.row]
         
         return vehicleModelCellData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        vehicleModelSelected = vehicleModel[indexPath.row]
+        vehicleModelSelected = String(VehicleModelVariables.vehicleModelIdList[indexPath.row])
+        print("model selected", vehicleModelSelected)
         
     }
 
