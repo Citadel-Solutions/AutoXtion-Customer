@@ -43,7 +43,7 @@ class AddRequestViewController: UIViewController {
     
     func addRequest(){
         let addRequest = ["description": "This is descriptions", "customer": 147, "service_type": 4,"promotion":117]
-        _ = Alamofire.request(PostRouter.Create(addRequest)).responseJSON { response in
+        _ = Alamofire.request(PostRouter.Create("customer_all_request",addRequest)).responseJSON { response in
             guard response.result.error == nil else {
                 return
             }

@@ -13,7 +13,8 @@ enum PostRouter: URLRequestConvertible {
     static let baseURLString = "http://202.38.172.167:8010/"
     
     case Get(String)
-    case Create([String: AnyObject])
+    case Create(String,[String: AnyObject])
+    case Update(String,[String: AnyObject])
     case Delete(Int)
     
     var URLRequest: NSMutableURLRequest {
@@ -25,6 +26,8 @@ enum PostRouter: URLRequestConvertible {
                 return .POST
             case .Delete:
                 return .DELETE
+            case .Update:
+                return .PUT
             }
         }
         
@@ -34,10 +37,12 @@ enum PostRouter: URLRequestConvertible {
             switch self {
             case .Get(let webServiceURL):
                 relativePath = "api/v1/rest/\(webServiceURL)"
-            case .Create:
-                relativePath = "api/v1/rest/customer_add_request/"
+            case .Create(let webServiceURL, _):
+                relativePath = "api/v1/rest/\(webServiceURL)/"
             case .Delete(let postNumber):
                 relativePath = "posts/\(postNumber)"
+            case .Update(let webServiceURL, _):
+                relativePath = "api/v1/rest/\(webServiceURL)/"
             }
             
             var URL = NSURL(string: PostRouter.baseURLString)!
@@ -51,8 +56,10 @@ enum PostRouter: URLRequestConvertible {
             switch self {
             case .Get, .Delete:
                 return (nil)
-            case .Create(let addRequest):
-                return (addRequest)
+            case .Create(_,let paramerters):
+                return (paramerters)
+            case .Update(_,let paramerters):
+                return (paramerters)
             }
         }()
         
@@ -61,7 +68,6 @@ enum PostRouter: URLRequestConvertible {
         let encoding = Alamofire.ParameterEncoding.JSON
         let (encodedRequest, _) = encoding.encode(URLRequest, parameters: params)
         encodedRequest.HTTPMethod = method.rawValue
-        
         return encodedRequest
     }
 }
