@@ -19,10 +19,5 @@ final class Vehicle: ResponseObjectSerializable, ResponseCollectionSerializable 
         self.id = representation.valueForKeyPath("id") as! Int
         print("id", id)
     }
-    
-    /*class func collection(response: NSHTTPURLResponse, representation: AnyObject) -> [User] {
-     let postArray = representation as! [AnyObject]
-     // using the map function we are able to instantiate Post while reusing our init? method above
-     return postArray.map({ User(response:response, representation: $0)! })
-     }*/
+   
 }

@@ -20,9 +20,5 @@ final class CustomerId: ResponseObjectSerializable, ResponseCollectionSerializab
         print("model", id)
     }
     
-    /*class func collection(response: NSHTTPURLResponse, representation: AnyObject) -> [User] {
-     let postArray = representation as! [AnyObject]
-     // using the map function we are able to instantiate Post while reusing our init? method above
-     return postArray.map({ User(response:response, representation: $0)! })
-     }*/
+
 }

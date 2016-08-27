@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class AddRequestViewController: UIViewController {
     @IBOutlet weak var serviceTypeView: UIView!
     @IBOutlet weak var requestDescriptionView: UIView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //tap to dismiss keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CustomerLoginViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-
+        
         // Do any additional setup after loading the view.
         
         let buttonColor = UIColor(red: 219/255.0, green: 219/255.0, blue: 219/255.0, alpha: 1.0)
@@ -35,8 +37,23 @@ class AddRequestViewController: UIViewController {
         bottomBorderShopInfoView.frame = CGRectMake(0.0, self.requestDescriptionView.frame.size.height-1, 800, 1.0)
         bottomBorderShopInfoView.backgroundColor = buttonColor.CGColor
         self.requestDescriptionView.layer .addSublayer(bottomBorderShopInfoView)
+        
+        addRequest()
     }
+    
+    func addRequest(){
+        let addRequest = ["description": "This is descriptions", "customer": 147, "service_type": 4,"promotion":117]
+        _ = Alamofire.request(PostRouter.Create(addRequest)).responseJSON { response in
+            guard response.result.error == nil else {
+                return
+            }
+            if let value: AnyObject = response.result.value {
+                let serviceRequestResponse = JSON(value)
+                print("The request is: " + serviceRequestResponse["service_type"].stringValue)
+            }
 
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,15 +65,15 @@ class AddRequestViewController: UIViewController {
         view.endEditing(true)
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

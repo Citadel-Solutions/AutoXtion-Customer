@@ -34,9 +34,8 @@ enum PostRouter: URLRequestConvertible {
             switch self {
             case .Get(let webServiceURL):
                 relativePath = "api/v1/rest/\(webServiceURL)"
-                print("rel path", relativePath)
             case .Create:
-                relativePath = "posts"
+                relativePath = "api/v1/rest/customer_add_request/"
             case .Delete(let postNumber):
                 relativePath = "posts/\(postNumber)"
             }
@@ -44,7 +43,6 @@ enum PostRouter: URLRequestConvertible {
             var URL = NSURL(string: PostRouter.baseURLString)!
             if let relativePath = relativePath {
                 URL = URL.URLByAppendingPathComponent(relativePath)
-                print("url", URL)
             }
             return URL
         }()
@@ -53,18 +51,15 @@ enum PostRouter: URLRequestConvertible {
             switch self {
             case .Get, .Delete:
                 return (nil)
-            case .Create(let newPost):
-                return (newPost)
+            case .Create(let addRequest):
+                return (addRequest)
             }
         }()
         
         let URLRequest = NSMutableURLRequest(URL: url)
-        print("url req", URLRequest)
-        
+        URLRequest.allHTTPHeaderFields = Authorize.auth()
         let encoding = Alamofire.ParameterEncoding.JSON
-        print("Encoding", encoding)
         let (encodedRequest, _) = encoding.encode(URLRequest, parameters: params)
-        
         encodedRequest.HTTPMethod = method.rawValue
         
         return encodedRequest

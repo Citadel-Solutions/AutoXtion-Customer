@@ -44,7 +44,6 @@
 		DC7441B21D68353F00914607 /* VehicleModelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B11D68353F00914607 /* VehicleModelsTableViewCell.swift */; };
 		DC7441B41D68355300914607 /* VehicleBrandsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B31D68355300914607 /* VehicleBrandsTableViewCell.swift */; };
 		DC7441B61D686F1300914607 /* PromotionRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B51D686F1300914607 /* PromotionRequestViewController.swift */; };
-		DC7441B81D686F2200914607 /* AddRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B71D686F2200914607 /* AddRequestViewController.swift */; };
 		DC7441BA1D68723E00914607 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441B91D68723E00914607 /* ServicesViewController.swift */; };
 		DC7441BC1D68725A00914607 /* ServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BB1D68725A00914607 /* ServicesTableViewCell.swift */; };
 		DC7441BF1D6874B000914607 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */; };
@@ -62,7 +61,9 @@
 		DCF8A6D61D7066F300B089F4 /* VehicleModelVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A6D51D7066F300B089F4 /* VehicleModelVariables.swift */; };
 		DCF8A7501D7083B300B089F4 /* CustomerId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A74F1D7083B300B089F4 /* CustomerId.swift */; };
 		DCF8A7521D7083FE00B089F4 /* CustomerIdVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8A7511D7083FE00B089F4 /* CustomerIdVariables.swift */; };
+		E94F7B0C1D7162B400BE799A /* AddRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F7B0B1D7162B400BE799A /* AddRequestViewController.swift */; };
 		E99F91EC1D6F331200097777 /* Varaibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F91EB1D6F331200097777 /* Varaibles.swift */; };
+		E9DED2A81D7156D6007C3B45 /* AuthenticationCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DED2A71D7156D6007C3B45 /* AuthenticationCredentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,7 +131,6 @@
 		DC7441B11D68353F00914607 /* VehicleModelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelsTableViewCell.swift; sourceTree = "<group>"; };
 		DC7441B31D68355300914607 /* VehicleBrandsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleBrandsTableViewCell.swift; sourceTree = "<group>"; };
 		DC7441B51D686F1300914607 /* PromotionRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionRequestViewController.swift; sourceTree = "<group>"; };
-		DC7441B71D686F2200914607 /* AddRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRequestViewController.swift; sourceTree = "<group>"; };
 		DC7441B91D68723E00914607 /* ServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		DC7441BB1D68725A00914607 /* ServicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewCell.swift; sourceTree = "<group>"; };
 		DC7441BD1D6874B000914607 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
@@ -148,7 +148,9 @@
 		DCF8A6D51D7066F300B089F4 /* VehicleModelVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelVariables.swift; sourceTree = "<group>"; };
 		DCF8A74F1D7083B300B089F4 /* CustomerId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerId.swift; sourceTree = "<group>"; };
 		DCF8A7511D7083FE00B089F4 /* CustomerIdVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerIdVariables.swift; sourceTree = "<group>"; };
+		E94F7B0B1D7162B400BE799A /* AddRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRequestViewController.swift; sourceTree = "<group>"; };
 		E99F91EB1D6F331200097777 /* Varaibles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Varaibles.swift; sourceTree = "<group>"; };
+		E9DED2A71D7156D6007C3B45 /* AuthenticationCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationCredentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +256,6 @@
 				DC7441B11D68353F00914607 /* VehicleModelsTableViewCell.swift */,
 				DC7441B31D68355300914607 /* VehicleBrandsTableViewCell.swift */,
 				DC7441B51D686F1300914607 /* PromotionRequestViewController.swift */,
-				DC7441B71D686F2200914607 /* AddRequestViewController.swift */,
 				DC7441B91D68723E00914607 /* ServicesViewController.swift */,
 				DC7441BB1D68725A00914607 /* ServicesTableViewCell.swift */,
 				DC8FF6151D6D684C00079482 /* APIClient.swift */,
@@ -275,6 +276,8 @@
 				DCF8A6D51D7066F300B089F4 /* VehicleModelVariables.swift */,
 				DCF8A74F1D7083B300B089F4 /* CustomerId.swift */,
 				DCF8A7511D7083FE00B089F4 /* CustomerIdVariables.swift */,
+				E9DED2A71D7156D6007C3B45 /* AuthenticationCredentials.swift */,
+				E94F7B0B1D7162B400BE799A /* AddRequestViewController.swift */,
 			);
 			path = "AutoXtion Customer";
 			sourceTree = "<group>";
@@ -580,6 +583,8 @@
 				DCF8A6C61D7042DA00B089F4 /* RequestVariables.swift in Sources */,
 				DCF8A6C41D70421500B089F4 /* ServiceRequest.swift in Sources */,
 				DC4A4A6E1D6EF54B00A46925 /* BackendError.swift in Sources */,
+				E9DED2A81D7156D6007C3B45 /* AuthenticationCredentials.swift in Sources */,
+				E94F7B0C1D7162B400BE799A /* AddRequestViewController.swift in Sources */,
 				DC7441B01D68352A00914607 /* VehicleYearTableViewCell.swift in Sources */,
 				DC6774921D66E4B700963FE7 /* CustomerLaunchViewController.swift in Sources */,
 				DC6774961D66E68F00963FE7 /* ForgotPasswordViewController.swift in Sources */,
@@ -601,7 +606,6 @@
 				DC6774AC1D673D2100963FE7 /* ChangePasswordProfileViewController.swift in Sources */,
 				DC7441BA1D68723E00914607 /* ServicesViewController.swift in Sources */,
 				DC7441B41D68355300914607 /* VehicleBrandsTableViewCell.swift in Sources */,
-				DC7441B81D686F2200914607 /* AddRequestViewController.swift in Sources */,
 				DC67745E1D66D75B00963FE7 /* AppDelegate.swift in Sources */,
 				DC7441BC1D68725A00914607 /* ServicesTableViewCell.swift in Sources */,
 				DC7441AA1D6834DA00914607 /* VehicleBrandsViewController.swift in Sources */,
