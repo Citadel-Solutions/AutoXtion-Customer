@@ -40,7 +40,7 @@ enum PostRouter: URLRequestConvertible {
             case .Create(let webServiceURL, _):
                 relativePath = "api/v1/rest/\(webServiceURL)/"
             case .Delete(let postNumber):
-                relativePath = "posts/\(postNumber)"
+                relativePath = "api/v1/rest/\(postNumber)"
             case .Update(let webServiceURL, _):
                 relativePath = "api/v1/rest/\(webServiceURL)"
             }
