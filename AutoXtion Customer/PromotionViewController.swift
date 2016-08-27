@@ -14,20 +14,11 @@ var addPromotionClicked = "no"
 
 class PromotionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var promotionTableView: UITableView!
-    
-    //declare array of Lead list
-    var promotionServiceTypeList:[String] = ["Auto Electrical Services", "Engine Management Diagnostics", "Wheel Alignment", "Full Car Service", "LPG Installation", "Tyres", "Air Conditioner Service", "Clutch & Transmission", "Brakes", "Radiators & Cooling", "Batteries", "Exhausts"]
-    
-    var promotionVehicleModelList:[String] = ["Fairmont", "Falcon", "Capri", "Ecosport", "Roadster", "Figo", "Swift", "Eurotech", "Asta", "GTS", "Sirion", "Camaro"]
-    
-    var promotionVehicleMfdYearList:[String] = ["1998", "2000", "1995", "2004", "2015", "2014", "2015", "2011", "2010", "2008", "2012", "2003"]
-    
-    var promotionCouponCodeList:[String] = ["AXNZRKF50", "AXNYIZF40", "AXNIMKT12", "AXNNYPY45", "AXNZRKF51", "AXNYIZF41", "AXNIMKT18", "AXNNYPY49", "AXNZRKF56", "AXNYIZF44", "AXNIMKT16", "AXNNYPY43"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getFirstPost()
+        getPromotionList()
 
         // Do any additional setup after loading the view.
         //let barItemColor = UIColor(red: 243/255.0, green: 134/255.0, blue: 25/255.0, alpha: 1.0)
@@ -36,31 +27,19 @@ class PromotionViewController: UIViewController, UITableViewDataSource, UITableV
 
     }
     
-    func getFirstPost() {
-        // Get first post
-        let request = Alamofire.request(PostRouter.Get("customer_all_promotions"))
-            .responseJSON { response in
-                guard response.result.error == nil else {
-                    // got an error in getting the data, need to handle it
-                    print("error calling GET on /posts/1")
-                    print(response.result.error!)
-                    return
+    func getPromotionList() {
+        _ = Alamofire.request(PostRouter.Get("customer_all_promotions"))
+            .responseCollection { (response: Response<[User], BackendError>) in
+                PromotionsVariables.arrRes=response.result.value!
+                for promotionValues in PromotionsVariables.arrRes{
+                    PromotionsVariables.promotionServiceTypeList.append(promotionValues.service)
+                    PromotionsVariables.promotionVehicleModelList.append(promotionValues.model)
+                    PromotionsVariables.promotionVehicleMfdYearList.append(promotionValues.make_year)
+                    PromotionsVariables.promotionCouponCodeList.append(promotionValues.coupon_code)
                 }
-                
-                if let value: AnyObject = response.result.value {
-                    // handle the results as JSON, without a bunch of nested if loops
-                    let post = JSON(value)
-                    // now we have the results, let's just print them though a tableview would definitely be better UI:
-                    print("The post is: " + post.description)
-                    if let title = post["coupon_code"].string {
-                        // to access a field:
-                        print("The title is: " + title)
-                    } else {
-                        print("error parsing /posts/1")
-                    }
-                }
+                print(PromotionsVariables.promotionCouponCodeList)
+                self.promotionTableView.reloadData()
         }
-        debugPrint(request)
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,17 +78,17 @@ class PromotionViewController: UIViewController, UITableViewDataSource, UITableV
     
     //function for the number of rows in each section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return promotionCouponCodeList.count
+        return PromotionsVariables.promotionServiceTypeList.count
     }
     
     //function to assign table data in each row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let promotionCellData = tableView.dequeueReusableCellWithIdentifier("promotionCell", forIndexPath: indexPath) as! PromotionTableViewCell
         
-        promotionCellData.promotionServiceType.text = promotionServiceTypeList[indexPath.row]
-        promotionCellData.promotionVehicleModel.text = promotionVehicleModelList[indexPath.row]
-        promotionCellData.promotionVehicleMfdYear.text = promotionVehicleMfdYearList[indexPath.row]
-        promotionCellData.promotionCouponCode.text = promotionCouponCodeList[indexPath.row]
+        promotionCellData.promotionServiceType.text = PromotionsVariables.promotionServiceTypeList[indexPath.row]
+        promotionCellData.promotionVehicleModel.text = PromotionsVariables.promotionVehicleModelList[indexPath.row]
+        promotionCellData.promotionVehicleMfdYear.text = PromotionsVariables.promotionVehicleMfdYearList[indexPath.row]
+        promotionCellData.promotionCouponCode.text = PromotionsVariables.promotionCouponCodeList[indexPath.row]
         
         let promotionImageViewColor = UIColor(red: 217.0/255.0, green: 217.0/255.0, blue: 219.0/255.0, alpha: 1.0)
         promotionCellData.promotionImageView.layer.borderWidth = 1

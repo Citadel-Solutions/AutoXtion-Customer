@@ -7,18 +7,33 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 var vehicleBrandSelected = ""
 
 class VehicleBrandsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var vehicleBrandsTableView: UITableView!
-    var vehicleBrandList:[String] = ["BONLUCK BLK", "DODGE", "HAVAL", "JMC", "LOTUS"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         vehicleBrandsTableView.contentInset = UIEdgeInsetsZero
+        getVehicleBrandsList()
+    }
+    
+    func getVehicleBrandsList() {
+        _ = Alamofire.request(PostRouter.Get("get_all_CarCompany"))
+            .responseCollection { (response: Response<[Vehicle], BackendError>) in
+                VehicleVariables.arrRes=response.result.value!
+                for promotionValues in VehicleVariables.arrRes{
+                    VehicleVariables.vehicleBrandList.append(promotionValues.company_name)
+                    VehicleVariables.vehicleIdList.append(promotionValues.id)
+                }
+                print(VehicleVariables.vehicleBrandList)
+                self.vehicleBrandsTableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,22 +73,22 @@ class VehicleBrandsViewController: UIViewController, UITableViewDataSource, UITa
     //*********************************************************************************************************************
     //function for the number of rows in each section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vehicleBrandList.count
+        return VehicleVariables.vehicleBrandList.count
     }
     
     //function to assign table data in each row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let vehicleBrandCellData = tableView.dequeueReusableCellWithIdentifier("vehicleBrandCell", forIndexPath: indexPath) as! VehicleBrandsTableViewCell
         
-        vehicleBrandCellData.vehicleBrand.text = vehicleBrandList[indexPath.row]
+        vehicleBrandCellData.vehicleBrand.text = VehicleVariables.vehicleBrandList[indexPath.row]
         
-        vehicleBrandCellData.vehicleBrand.tag = indexPath.row
+        vehicleBrandCellData.vehicleBrand.tag = VehicleVariables.vehicleIdList[indexPath.row]
         
         return vehicleBrandCellData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        vehicleBrandSelected = vehicleBrandList[indexPath.row]
+        vehicleBrandSelected = String(VehicleVariables.vehicleIdList[indexPath.row])
         print(vehicleBrandSelected)
     }
     

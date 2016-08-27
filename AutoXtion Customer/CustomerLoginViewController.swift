@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 var loginFlag = "0"
 var key = ""
@@ -65,12 +67,6 @@ class CustomerLoginViewController: UIViewController {
         let loginbuttonColor = UIColor(red: 243.0/255.0, green: 134.0/255.0, blue: 25.0/255.0, alpha: 1.0)
         self.loginButton.layer.borderWidth = 1
         self.loginButton.layer.borderColor = loginbuttonColor.CGColor
-        
-//        email = self.emailTextField.text!
-//        password = self.passwordTextField.text!
-//        
-//        print("Email", email)
-//        print("Pwd", password)
     }
 
     override func didReceiveMemoryWarning() {
@@ -111,6 +107,13 @@ class CustomerLoginViewController: UIViewController {
                
                 
                 print("function", self.statusCode)
+                
+               //self.getRequestList()
+                
+                
+                
+                
+                
                 //self.showResult()
                 
 //                let request = NSMutableURLRequest(URL: NSURL(string: "http://202.38.172.167:8010/api/v1/rest/customer_all_appointment/")!,
@@ -202,6 +205,7 @@ class CustomerLoginViewController: UIViewController {
         request.HTTPBody = data
         HTTPsendRequest(request, callback: callback)
     }
+   
     
     func showAlert() {
         let myAlert = UIAlertController(title: "", message: "Username/Password is incorrect.", preferredStyle: UIAlertControllerStyle.Alert)
