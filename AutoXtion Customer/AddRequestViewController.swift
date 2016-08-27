@@ -42,12 +42,13 @@ class AddRequestViewController: UIViewController {
     }
     
     func addRequest(){
-        let addRequest = ["description": "This is descriptions", "customer": 147, "service_type": 4,"promotion":117]
-        _ = Alamofire.request(PostRouter.Create("customer_all_request",addRequest)).responseJSON { response in
+        let addRequest = ["description": "this is des", "customer": 147, "service_type": 4,"promotion":117]
+        _ = Alamofire.request(PostRouter.Create("customer_add_request",addRequest)).responseJSON { response in
             guard response.result.error == nil else {
                 return
             }
             if let value: AnyObject = response.result.value {
+                print(response.result.value)
                 let serviceRequestResponse = JSON(value)
                 print("The request is: " + serviceRequestResponse["service_type"].stringValue)
             }

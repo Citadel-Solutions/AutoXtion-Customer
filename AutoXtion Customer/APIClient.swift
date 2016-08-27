@@ -42,7 +42,7 @@ enum PostRouter: URLRequestConvertible {
             case .Delete(let postNumber):
                 relativePath = "posts/\(postNumber)"
             case .Update(let webServiceURL, _):
-                relativePath = "api/v1/rest/\(webServiceURL)/"
+                relativePath = "api/v1/rest/\(webServiceURL)"
             }
             
             var URL = NSURL(string: PostRouter.baseURLString)!
