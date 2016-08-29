@@ -15,7 +15,7 @@ enum PostRouter: URLRequestConvertible {
     case Get(String)
     case Create(String,[String: AnyObject])
     case Update(String,[String: AnyObject])
-    case Delete(Int)
+    case Delete(String)
     
     var URLRequest: NSMutableURLRequest {
         var method: Alamofire.Method {
@@ -39,8 +39,8 @@ enum PostRouter: URLRequestConvertible {
                 relativePath = "api/v1/rest/\(webServiceURL)"
             case .Create(let webServiceURL, _):
                 relativePath = "api/v1/rest/\(webServiceURL)/"
-            case .Delete(let postNumber):
-                relativePath = "api/v1/rest/\(postNumber)"
+            case .Delete(let webServiceURL):
+                relativePath = "api/v1/rest/\(webServiceURL)"
             case .Update(let webServiceURL, _):
                 relativePath = "api/v1/rest/\(webServiceURL)"
             }
@@ -49,6 +49,7 @@ enum PostRouter: URLRequestConvertible {
             if let relativePath = relativePath {
                 URL = URL.URLByAppendingPathComponent(relativePath)
             }
+            print(URL)
             return URL
         }()
         
@@ -65,9 +66,11 @@ enum PostRouter: URLRequestConvertible {
         
         let URLRequest = NSMutableURLRequest(URL: url)
         URLRequest.allHTTPHeaderFields = Authorize.auth()
+        print(URLRequest.allHTTPHeaderFields)
         let encoding = Alamofire.ParameterEncoding.JSON
         let (encodedRequest, _) = encoding.encode(URLRequest, parameters: params)
         encodedRequest.HTTPMethod = method.rawValue
+        print(encodedRequest)
         return encodedRequest
     }
 }

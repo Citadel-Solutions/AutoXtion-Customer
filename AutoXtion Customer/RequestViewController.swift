@@ -33,6 +33,19 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
+    func deleteRequest(){
+        _ = Alamofire.request(PostRouter.Delete("customer_update_delete_request/\(135)")).responseJSON { response in
+            if let error = response.result.error {
+                print("error calling DELETE on /todos/1")
+                print(error)
+            } else {
+            print(response.description)
+                print("delete ok")
+            }
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -87,8 +100,14 @@ class RequestViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            RequestVariables.requestServiceTypeList.removeAtIndex(indexPath.row)
+            //RequestVariables.requestServiceTypeList.removeAtIndex(indexPath.row)
+            
+            deleteRequest()
+            
             self.requestTableView.reloadData()
+            
+            
+            
         }
     }
     
